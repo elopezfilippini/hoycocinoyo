@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.swal2-popup {
+  font-family: "Montserrat", sans-serif !important;
+}
