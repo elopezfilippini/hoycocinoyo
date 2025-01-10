@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
+import Home from "./Home"
 import Login from './Login'
 import './App.css'
 
@@ -30,6 +31,7 @@ function App() {
        {/* RUTAS USERS */}
       <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/inicio" element={<Home />} />
       </Routes>
     </>
   )

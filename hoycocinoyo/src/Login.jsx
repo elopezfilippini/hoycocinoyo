@@ -8,10 +8,11 @@ import { useSelector, useDispatch } from "react-redux";
 
 function Login()
 {
-    const navigate = useNavigate();
-    const [access, setAccess] = useState(false);
     const EMAIL = 'ejemplo@gmail.com';
     const PASSWORD = '1234';
+    
+    const navigate = useNavigate();
+    const [access, setAccess] = useState(false);
     const [userData,SetUserData] = useState({email:"",password:""})
     const [error,setErrors] = useState({})
     function login(userData) {
@@ -25,8 +26,8 @@ function Login()
             console.log(e.target.name)
             const nombre = e.target.name;
             SetUserData({...userData,[nombre]: e.target.value});
-            console.log (userData)
-            setErrors(validate({...userData,[nombre]: e.target.value}))
+            // console.log (userData)
+            // setErrors(validate({...userData,[nombre]: e.target.value}))
         }
         function Handleclick(){
             navigate('/inicio')
@@ -34,17 +35,19 @@ function Login()
         
         function handleSubmit(e){
             e.preventDefault()
-            console.log(userData.password)
-            console.log(userData.email)
-            console.log(login(userData))
+             login(userData) 
+
+       
         }
 
 return (
 <div>
     <label style={{color:"black"}}>Email : </label> <input name="email" onChange={HandleOnChange}></input>
-    <label style={{color:"black"}} >    Password: </label> <input name="password"  type  ="password"onChange={HandleOnChange}></input>
+    <br></br>
+    <label style={{color:"black"}} >Password: </label> <input name="password"  type  ="password"onChange={HandleOnChange}></input>
     <hr style={{margin:"15px"}}></hr>   
     <a1 style={{color:"red"}}>{error.email ? error.email: null} </a1>
+    <br></br>
     <a1 style={{color:"red"}}>{error.password ? error.password: null} </a1>
     <br></br>
     <button type="submit" style={{margin:"5px"}} onClick={handleSubmit}> Enviar </button>
