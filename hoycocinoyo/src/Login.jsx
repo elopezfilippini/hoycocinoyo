@@ -8,8 +8,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 function Login()
 {
-    const EMAIL = 'ejemplo@gmail.com';
-    const PASSWORD = '1234';
+    const EMAIL = '';
+    const PASSWORD = '';
     
     const navigate = useNavigate();
     const [access, setAccess] = useState(false);

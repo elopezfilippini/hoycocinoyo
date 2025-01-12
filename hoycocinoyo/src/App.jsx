@@ -5,7 +5,10 @@ import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import Home from "./Home"
 import Login from './Login'
+import Cards  from "./Cards"
+import { useParams } from 'react-router-dom'
 import './App.css'
+// import NavBarUser from './NavUser'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,9 +35,11 @@ function App() {
       <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/inicio" element={<Home />} />
+      <Route path="/inicio/:tarjeta" element={<Cards />} />
+
       </Routes>
     </>
-  )
+  ) 
 }
 
 export default App

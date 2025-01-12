@@ -7,10 +7,12 @@ import styles from "./Home.module.css";
 function Home() {
   return (
     <div className={styles.cardContainer}>
+      <Link to="/inicio/Bebidas">
+
       <div className={styles.card}>
         <div className={styles.cardTitle}>Tragos</div>
         <FaMartiniGlassCitrus className={styles.icon} />
-      </div>
+      </div></Link>
 
       <div className={styles.card}>
         <div className={styles.cardTitle}>Cervezas</div>
